@@ -1,0 +1,12 @@
+[Unit]
+Description=Example Service
+After=syslog.target
+
+[Service]
+SyslogIdentifier=example-service
+ExecStart=/bin/bash -c "java -jar example.jar"
+User=example
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
